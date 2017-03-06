@@ -8,6 +8,7 @@ router.get('/:id', function(req, res) {
 
 router.post('/novo/', function(req, res) {
     usuarioController.cadastraNovoUsuario(req.body);
+    res.end();
 });
 
 module.exports = router;

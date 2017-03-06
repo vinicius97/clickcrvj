@@ -9,7 +9,19 @@ var itensPedidoSchema = new Schema({
 var pedidoSchema = new Schema({
     usuario: String,
     itens: [itensPedidoSchema],
+    status: String,
     date: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('Pedido', pedidoSchema);
+
+
+/*
+{
+    "usuario": "Vinicius",
+    "itens": [{
+        "item": "Budweiser"
+    },{
+        "item": "Brahma"
+    }]
+}*/
